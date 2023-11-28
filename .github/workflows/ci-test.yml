@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 18
       - name: "Instalar CLI de Angular"
-        run: npm install -g @angular/cli@ANGULAR_CLI_VERSION
+        run: npm install -g @angular/cli@$ANGULAR_CLI_VERSION
       - name: "INstalar dependencias"
         run: |
           npm install --ignore-scripts
@@ -53,7 +53,7 @@ jobs:
         with:
           node-version: 18
       - name: "Instalar CLI de Angular"
-        run: npm install -g @angular/cli@ANGULAR_CLI_VERSION
+        run: npm install -g @angular/cli@$ANGULAR_CLI_VERSION
       - name: "INstalar dependencias"
         run: |
           npm install
