@@ -27,7 +27,7 @@ jobs:
           cd frontend
           npm install --ignore-scripts --legacy-peer-deps
       - name: "Lint"
-        uses: npm run lint
+        run: npm run lint
       - name: "Lint configuraciones personalizadas"
         run: >
           npm run lint:config -- -f ./config/7ms.yml &&
