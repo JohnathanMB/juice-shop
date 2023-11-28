@@ -20,14 +20,14 @@ jobs:
         with:
           node-version: 18
       - name: "Instalar CLI de Angular"
-        run: npm install -g @angular/cli@ANGULAR_CLI_VERSION
+        run: npm install -g @angular/cli@$ANGULAR_CLI_VERSION
       - name: "INstalar dependencias"
         run: |
           npm install --ignore-scripts
           cd frontend
           npm install --ignore-scripts --legacy-peer-deps
       - name: "Lint"
-        uses: npm run lint
+        run: npm run lint
       - name: "Lint configuraciones personalizadas"
         run: >
           npm run lint:config -- -f ./config/7ms.yml &&
@@ -53,7 +53,7 @@ jobs:
         with:
           node-version: 18
       - name: "Instalar CLI de Angular"
-        run: npm install -g @angular/cli@ANGULAR_CLI_VERSION
+        run: npm install -g @angular/cli@$ANGULAR_CLI_VERSION
       - name: "INstalar dependencias"
         run: |
           npm install
