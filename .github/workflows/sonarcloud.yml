@@ -25,5 +25,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          sonar.projectKey: JohnathanMB_juice-shop
-          sonar.javascript.lcov.reportPaths: ./server-lcov.info
+          args:
+            -Dsonar.projectKey=JohnathanMB_juice-shop
+            -Dsonar.organization=johnathanmb
